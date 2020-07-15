@@ -3,7 +3,12 @@
 namespace vladayson\zipper\zippy\FileStrategy;
 
 use Alchemy\Zippy\FileStrategy\AbstractFileStrategy;
+use vladayson\zipper\zippy\Adapter\Zip7zipAdapter;
 
+/**
+ * Class Zip7zipFileStrategy
+ * @package vladayson\zipper\zippy\FileStrategy
+ */
 class Zip7zipFileStrategy extends AbstractFileStrategy
 {
  
@@ -12,9 +17,9 @@ class Zip7zipFileStrategy extends AbstractFileStrategy
      */
     protected function getServiceNames()
     {
-        return array(
-            'Victor78\\ZippyExt\\Adapter\\Zip7zipAdapter',
-        );
+        return [
+            Zip7zipAdapter::class
+        ];
     }
 
     /**

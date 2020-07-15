@@ -25,9 +25,15 @@ use Alchemy\Zippy\Resource\{
 use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\Process\ExecutableFinder;
 
-
+/**
+ * Class AdapterContainer
+ * @package vladayson\zipper\zippy\Adapter
+ */
 class AdapterContainer extends OldAdapterContainer
 {
+    /**
+     * @return OldAdapterContainer|static
+     */
     public static function load()
     {
         $container = new static();
@@ -143,7 +149,7 @@ class AdapterContainer extends OldAdapterContainer
         $container['7zip.deflator'] = null;
         
         $container['Victor78\\ZippyExt\\Adapter\\Zip7zipAdapter'] = function($container) {
-            return \Victor78\ZippyExt\Adapter\Zip7zipAdapter::newInstance(
+            return Zip7zipAdapter::newInstance(
                 $container['executable-finder'],
                 $container['resource-manager'],
                 $container['7zip.inflator'],

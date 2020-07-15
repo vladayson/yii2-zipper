@@ -2,6 +2,9 @@
 
 namespace vladayson\zipper\zippy;
 
+use Alchemy\Zippy\Adapter\AdapterContainer;
+use Alchemy\Zippy\Archive\ArchiveInterface;
+use Alchemy\Zippy\Zippy as BaseZippy;
 use RuntimeException;
 use Symfony\Component\String\Exception\ExceptionInterface;
 use Traversable;
@@ -20,14 +23,14 @@ use Alchemy\Zippy\FileStrategy\{
  * Class Zippy
  * @package vladayson\zipper\zippy
  */
-class Zippy extends \Alchemy\Zippy\Zippy
+class Zippy extends BaseZippy
 {
     /**
      * @return static
      */
     public static function load()
     {
-        $adapters = Adapter\AdapterContainer::load();
+        $adapters = AdapterContainer::load();
 
         $factory = new static($adapters);
 

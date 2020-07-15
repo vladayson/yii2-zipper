@@ -2,6 +2,7 @@
 
 namespace vladayson\zipper\zippy\Adapter\VersionProbe;
 
+use Alchemy\Zippy\Adapter\VersionProbe\ZipVersionProbe;
 use Alchemy\Zippy\ProcessBuilder\ProcessBuilderFactoryInterface;
 use Alchemy\Zippy\Adapter\VersionProbe\VersionProbeInterface;
 
@@ -34,8 +35,8 @@ class Zip7zipVersionProbe implements VersionProbeInterface
     /**
      * Set the inflator to zip
      *
-     * @param  ProcessBuilderFactoryInterface $inflator
-     * @return ZipVersionProbe
+     * @param ProcessBuilderFactoryInterface $inflator
+     * @return Zip7zipVersionProbe
      */
     public function setInflator(ProcessBuilderFactoryInterface $inflator)
     {
@@ -48,7 +49,7 @@ class Zip7zipVersionProbe implements VersionProbeInterface
      * Set the deflator to unzip
      *
      * @param  ProcessBuilderFactoryInterface $deflator
-     * @return ZipVersionProbe
+     * @return Zip7zipVersionProbe
      */
     public function setDeflator(ProcessBuilderFactoryInterface $deflator)
     {
@@ -62,7 +63,6 @@ class Zip7zipVersionProbe implements VersionProbeInterface
      */
     public function getStatus()
     {
-        
         if (null !== $this->isSupported) {
             return $this->isSupported;
         }
@@ -70,7 +70,6 @@ class Zip7zipVersionProbe implements VersionProbeInterface
         if (null === $this->inflator) {
             return $this->isSupported = VersionProbeInterface::PROBE_NOTSUPPORTED;
         }
-
 
         $processInflate = $this
             ->inflator

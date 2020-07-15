@@ -2,6 +2,7 @@
 
 namespace vladayson\zipper;
 
+use Alchemy\Zippy\Archive\ArchiveInterface;
 use yii\base\Component;
 
 use vladayson\zipper\zippy\Zippy;
@@ -68,7 +69,7 @@ class Zipper extends Component implements ZipperInterface
      * @param bool $recursive
      * @param string|null $type
      * @param string|null $password
-     * @return zippy\ArchiveInterface
+     * @return ArchiveInterface
      */
     public function create(string $path, array $files = null, bool $recursive = true, string $type = null, string $password = null)
     {
@@ -81,7 +82,7 @@ class Zipper extends Component implements ZipperInterface
      * @param $path
      * @param null $type
      * @param null $password
-     * @return zippy\ArchiveInterface
+     * @return ArchiveInterface
      */
     public function open($path, $type = null, $password = null)
     {

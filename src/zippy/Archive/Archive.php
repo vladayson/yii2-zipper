@@ -4,13 +4,14 @@ namespace vladayson\zipper\zippy\Archive;
 
 use Alchemy\Zippy\Archive\Archive as BaseArchive;
 use Alchemy\Zippy\Adapter\AdapterInterface;
+use Alchemy\Zippy\Archive\ArchiveInterface;
 use Alchemy\Zippy\Resource\ResourceManager;
 use Alchemy\Zippy\Adapter\Resource\ResourceInterface;
 
 /**
  * Represents an archive
  */
-class Archive extends BaseArchive implements \Alchemy\Zippy\Archive\ArchiveInterface
+class Archive extends BaseArchive implements ArchiveInterface
 {
     /**
      * @inheritdoc
