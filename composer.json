@@ -1,0 +1,34 @@
+{
+    "name": "vladayson/yii2-zip",
+    "description": "Yii2 Zip processor",
+    "type": "yii2-extension",
+    "keywords": [
+        "yii2",
+        "extension",
+        "zippy",
+        "zip",
+        "tar",
+        "archive",
+        "archiver",
+        "zipper",
+        "component"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vladayson",
+            "email": "vivanenko@dev-gns.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "yiisoft/yii2": "~2.0.34",
+        "alchemy/zippy": "~0.4.9",
+        "symfony/process": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "vladayson\\zipper\\": "src/"
+        }
+    }
+}
