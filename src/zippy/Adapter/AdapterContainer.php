@@ -124,7 +124,7 @@ class AdapterContainer extends OldAdapterContainer
             );
         };
 
-        $container['Alchemy\\Zippy\\Adapter\\BSDTar\\TarGzBSDTarAdapter'] = function($container) {
+        $container[TarGzBSDTarAdapter::class] = function($container) {
             return TarGzBSDTarAdapter::newInstance(
                 $container['executable-finder'],
                 $container['resource-manager'],
@@ -133,7 +133,7 @@ class AdapterContainer extends OldAdapterContainer
             );
         };
 
-        $container['Alchemy\\Zippy\\Adapter\\BSDTar\\TarBz2BSDTarAdapter'] = function($container) {
+        $container[TarBz2BSDTarAdapter::class] = function($container) {
             return TarBz2BSDTarAdapter::newInstance(
                 $container['executable-finder'],
                 $container['resource-manager'],
@@ -141,14 +141,14 @@ class AdapterContainer extends OldAdapterContainer
                 $container['bsd-tar.deflator']);
         };
 
-        $container['Alchemy\\Zippy\\Adapter\\ZipExtensionAdapter'] = function() {
+        $container[ZipExtensionAdapter::class] = function() {
             return ZipExtensionAdapter::newInstance();
         };
         
         $container['7zip.inflator'] = null;
         $container['7zip.deflator'] = null;
         
-        $container['Victor78\\ZippyExt\\Adapter\\Zip7zipAdapter'] = function($container) {
+        $container[Zip7zipAdapter::class] = function($container) {
             return Zip7zipAdapter::newInstance(
                 $container['executable-finder'],
                 $container['resource-manager'],
