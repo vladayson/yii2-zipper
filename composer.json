@@ -21,10 +21,8 @@
         }
     ],
     "require": {
-        "php": ">=7.0",
-        "yiisoft/yii2": "~2.0.34",
-        "alchemy/zippy": "~0.4.9",
-        "symfony/process": "*"
+        "php": ">=7.3",
+        "yiisoft/yii2": "~2.0.34"
     },
     "autoload": {
         "psr-4": {
