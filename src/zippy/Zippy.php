@@ -2,7 +2,7 @@
 
 namespace vladayson\zipper\zippy;
 
-use Alchemy\Zippy\Adapter\AdapterContainer;
+use vladayson\zipper\zippy\Adapter\AdapterContainer;
 use Alchemy\Zippy\Archive\ArchiveInterface;
 use Alchemy\Zippy\Zippy as BaseZippy;
 use RuntimeException;
